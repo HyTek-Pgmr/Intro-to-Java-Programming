@@ -36,7 +36,8 @@ public class Exercise_06_37 {
 		// If the number is shorter than the width format
 		// Else return the string representation for the number
 		if (num.length() < width) {
-			for (int i = width - num.length(); i > 0; i--) {
+		//	for (int i = width - num.length(); i > 0; i--) {   should be i >= 0; otherwise the width is 1 digit too small
+			for (int i = width - num.length(); i >= 0; i--) {  
 				num = 0 + num;
 			}
 		}
